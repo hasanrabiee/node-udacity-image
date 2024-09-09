@@ -1,4 +1,3 @@
-
 # Image Resizing API
 
 This is an Express-based API for resizing JPG images using [Sharp](https://sharp.pixelplumbing.com/). The API allows users to resize images to specific dimensions and caches the resized images for faster subsequent requests.
@@ -17,17 +16,20 @@ This is an Express-based API for resizing JPG images using [Sharp](https://sharp
 ## Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/hasanrabiee/node-udacity-image.git
    cd image-resizing-api
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Create the necessary directories for storing images:
+
    ```bash
    mkdir -p images/processed
    ```
@@ -37,6 +39,7 @@ This is an Express-based API for resizing JPG images using [Sharp](https://sharp
 ## Usage
 
 1. Start the server:
+
    ```bash
    npm run dev
    ```
@@ -48,6 +51,7 @@ This is an Express-based API for resizing JPG images using [Sharp](https://sharp
    - `height`: The desired height of the resized image.
 
    Example request:
+
    ```
    GET http://localhost:3000/api/resize?filename=image1&width=300&height=200
    ```
@@ -66,6 +70,7 @@ The API will return appropriate error messages in the following cases:
 ## Example Error Responses
 
 - Missing parameters:
+
   ```json
   {
     "error": "Missing required parameters (filename, width, height)"
@@ -73,6 +78,7 @@ The API will return appropriate error messages in the following cases:
   ```
 
 - Invalid width or height:
+
   ```json
   {
     "error": "Invalid width or height"
