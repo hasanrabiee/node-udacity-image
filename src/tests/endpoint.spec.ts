@@ -1,5 +1,4 @@
 import request from 'supertest';
-import express from 'express';
 import { app } from '../server';
 
 describe('GET /api/resize', () => {
